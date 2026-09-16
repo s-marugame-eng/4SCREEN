@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>4画面表示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ダッシュボード</title>
   <style>
     * {
       margin: 0;
@@ -10,32 +11,106 @@
       box-sizing: border-box;
     }
 
-    .container {
+    body {
+      background-color: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'メイリオ', sans-serif;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 28px;
+      margin-bottom: 40px;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 0;
-      width: 100vw;
-      height: 100vh;
+      gap: 24px;
     }
 
-    .screen {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .card {
+      background: linear-gradient(135deg, #16213e, #0f3460);
+      border: 2px solid #e94560;
+      border-radius: 16px;
+      width: 280px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 24px #e94560;
+    }
+
+    .card .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .card .label {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .card .url {
+      color: #a0a0b0;
+      font-size: 11px;
+      margin-top: 6px;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- 画面1：自作サイト -->
-    <iframe class="screen" src="https://s-marugame-eng.github.io/ponpuzyou/"></iframe>
+
+  <h1>🖥️ ダッシュボード</h1>
+
+  <div class="grid">
+
+    <!-- 画面1 -->
+    <a class="card" href="https://s-marugame-eng.github.io/ponpuzyou/" target="_blank">
+      <div class="icon">⚙️</div>
+      <div class="label">画面 1</div>
+      <div class="url">s-marugame-eng</div>
+    </a>
+
     <!-- 画面2 -->
-    <iframe class="screen" src="http://sioyamarugame.mydns.jp/user/Page_1.html"></iframe>
+    <a class="card" href="http://sioyamarugame.mydns.jp/user/Page_1.html" target="_blank">
+      <div class="icon">🖥️</div>
+      <div class="label">画面 2</div>
+      <div class="url">sioyamarugame</div>
+    </a>
+
     <!-- 画面3 -->
-    <iframe class="screen" src="http://jyouseimarugame.mydns.jp/user/Page_1.html"></iframe>
+    <a class="card" href="http://jyouseimarugame.mydns.jp/user/Page_1.html" target="_blank">
+      <div class="icon">🖥️</div>
+      <div class="label">画面 3</div>
+      <div class="url">jyouseimarugame</div>
+    </a>
+
     <!-- 画面4 -->
-    <iframe class="screen" src="http://jyouhokumarugame.mydns.jp/user/Page_1.html"></iframe>
+    <a class="card" href="http://jyouhokumarugame.mydns.jp/user/Page_1.html" target="_blank">
+      <div class="icon">🖥️</div>
+      <div class="label">画面 4</div>
+      <div class="url">jyouhokumarugame</div>
+    </a>
+
   </div>
+
 </body>
 </html>
