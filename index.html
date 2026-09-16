@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>4画面表示</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 画面1：自作サイト -->
+    <iframe class="screen" src="https://s-marugame-eng.github.io/ponpuzyou/"></iframe>
+    <!-- 画面2 -->
+    <iframe class="screen" src="http://sioyamarugame.mydns.jp/user/Page_1.html"></iframe>
+    <!-- 画面3 -->
+    <iframe class="screen" src="http://jyouseimarugame.mydns.jp/user/Page_1.html"></iframe>
+    <!-- 画面4 -->
+    <iframe class="screen" src="http://jyouhokumarugame.mydns.jp/user/Page_1.html"></iframe>
+  </div>
+</body>
+</html>
